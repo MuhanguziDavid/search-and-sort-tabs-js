@@ -3,19 +3,6 @@ import Container from 'react-bootstrap/Container';
 import './LandingPage.scss';
 import SearchAlgorithms from '../searchAlgorithms';
 
-const algorithmsPayload = {
-  algorithms: [
-    {
-      id: 1,
-      name: 'Linear Search'
-    },
-    {
-      id: 2,
-      name: 'Binary Search'
-    }
-  ]
-}
-
 const LandingPage = () => {
   return (
     <Container>
@@ -24,12 +11,14 @@ const LandingPage = () => {
           <div className="col-md-12 jumbotron jumbotron-custom">
             <h1>Data Structures and Algorithms</h1>
             <p>
-              Enter a dataset and see the magic!
+              Enter a dataset and see the magic! <br/>
+              (separate terms with a space) <br />
+              <a href="https://numbergenerator.org/" rel="noopener noreferrer" target="_blank">Random Number Generator</a>
             </p>
           </div>
         </div>
         <div className="row body-container">
-          <SearchAlgorithms algorithms={algorithmsPayload.algorithms}/>
+          <SearchAlgorithms />
         </div>
       </React.Fragment>
     </Container>
