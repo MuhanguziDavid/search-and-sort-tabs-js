@@ -1,12 +1,13 @@
 import React from 'react';
 import './WorkBox.scss';
 
-const SearchInputForm = ({ handleAlgorithm, handleChange, dataSet }) => {
+const SearchInputForm = ({ searchResult }) => {
   return (
     <div className="col-md-5 workbox-container">
       <h4 className="mt-3">Output</h4>
-      <div className="input-group mb-3">
-      </div>
+      <p>
+        {searchResult}
+      </p>
     </div>
   )
 }
