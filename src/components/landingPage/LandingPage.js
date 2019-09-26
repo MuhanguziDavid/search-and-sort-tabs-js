@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { Container, Tabs, Tab } from 'react-bootstrap';
 import './LandingPage.scss';
-import SearchAlgorithms from '../searchAlgorithms';
+import Algorithms from '../inputOutputForms';
 
 const LandingPage = () => {
   return (
@@ -17,9 +17,16 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
-        <div className="row body-container">
-          <SearchAlgorithms />
-        </div>
+        {/* <div className="row body-container"> */}
+          <Tabs defaultActiveKey="searching" id="uncontrolled-tab-example">
+            <Tab eventKey="searching" title="Searching">
+              <Algorithms algorithmType='searching'/>
+            </Tab>
+            <Tab eventKey="sorting" title="Sorting">
+              <Algorithms algorithmType='sorting'/>
+            </Tab>
+          </Tabs>
+        {/* </div> */}
       </React.Fragment>
     </Container>
   );

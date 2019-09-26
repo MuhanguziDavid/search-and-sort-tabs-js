@@ -1,15 +1,18 @@
 import React from 'react';
 import './WorkBox.scss';
 
-const SearchInputForm = ({ searchResult }) => {
+const OutputForm = ({ searchResult, timeTaken }) => {
   return (
     <div className="col-md-5 workbox-container">
       <h4 className="mt-3">Output</h4>
-      <p>
+      <div className="result-box">
         {searchResult}
-      </p>
+      </div>
+      <div className="mb-3">
+        {timeTaken}
+      </div>
     </div>
   )
 }
 
-export default SearchInputForm;
+export default OutputForm;
