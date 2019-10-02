@@ -1,6 +1,4 @@
-const binarySearch = (dataSet, searchTerm) => {
-  const dataArray = dataSet.split(" ");
-
+const binarySearch = (dataArray, searchTerm) => {
   let min = 0;
   let max = dataArray.length - 1;
   let mid = Math.floor((min + max) / 2)
