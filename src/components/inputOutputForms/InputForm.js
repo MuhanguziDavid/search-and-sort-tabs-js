@@ -1,5 +1,5 @@
 import React from 'react';
-import './WorkBox.scss';
+import './InputOutputForms.scss';
 
 const InputForm = ({ handleAlgorithm, handleSubmit, handleChange, dataSet, searchTerm, algorithmType }) => {
   return (

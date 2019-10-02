@@ -34,11 +34,21 @@ class SearchAlgorithms extends Component {
 
   handleSearchAlgorithms = () => {
     const { algorithm, dataSet, searchTerm } = this.state;
+  
+    let dataArray = dataSet.split(" ").map(Number);
+    if (isNaN(dataArray[0])) {
+      dataArray = dataSet.split(" ");
+    }
+    let searchTermRefined = Number(searchTerm);
+    if (isNaN(searchTermRefined)) {
+      searchTermRefined = searchTerm;
+    }
+  
     if(algorithm === 'linear') {
-      this.setState({searchResult: linearSearch(dataSet, searchTerm)});
+      this.setState({searchResult: linearSearch(dataArray, searchTermRefined)});
     }
     if(algorithm === 'binary') {
-      this.setState({searchResult: binarySearch(dataSet, searchTerm)});
+      this.setState({searchResult: binarySearch(dataArray, searchTermRefined)});
     }
   }
 
