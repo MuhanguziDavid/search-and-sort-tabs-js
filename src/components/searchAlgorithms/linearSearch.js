@@ -1,10 +1,23 @@
-const linearSearch = (dataArray, searchTerm) => {
+import highlightSearchResult from '../searchAlgorithms/highlightSearchResult';
+
+const linearSearch = (dataArray, searchTerm, dataSet) => {
   for(let i = 0; i < dataArray.length; i++) {
     if(dataArray[i] === searchTerm) {
-      return `"${searchTerm}" is in position ${i + 1} out of ${dataArray.length} items`
+      // function to highlight text being searched
+      const resultDataSet = highlightSearchResult(dataSet, searchTerm);
+
+      const result = {
+        searchPosition: `"${searchTerm}" was found`,
+        resultDataSet,
+      }
+      return result;
     }
   }
-  return "Value not found"
+  const result = {
+    searchPosition: `"${searchTerm}" was not found`,
+    resultDataSet: dataSet,
+  }
+  return result;
 }
 
 export default linearSearch;
