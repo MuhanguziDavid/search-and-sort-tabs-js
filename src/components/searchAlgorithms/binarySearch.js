@@ -1,4 +1,6 @@
-const binarySearch = (dataArray, searchTerm) => {
+import highlightSearchResult from '../searchAlgorithms/highlightSearchResult';
+
+const binarySearch = (dataArray, searchTerm, dataSet) => {
   let min = 0;
   let max = dataArray.length - 1;
   let mid = Math.floor((min + max) / 2)
@@ -14,9 +16,20 @@ const binarySearch = (dataArray, searchTerm) => {
   }
 
   if (dataArray[mid] === searchTerm) {
-    return `${dataArray[mid]} was found`;
+    // function to highlight text being searched
+    const resultDataSet = highlightSearchResult(dataSet, searchTerm);
+
+    const result = {
+      searchPosition: `"${dataArray[mid]}" was found`,
+      resultDataSet,
+    }
+    return result;
   } else {
-    return `${searchTerm} was not found! Ensure that the list is sorted`;
+    const result = {
+      searchPosition: `"${searchTerm}" was not found! Ensure that the list is sorted`,
+      resultDataSet: dataSet,
+    }
+    return result;
   }
 }
 

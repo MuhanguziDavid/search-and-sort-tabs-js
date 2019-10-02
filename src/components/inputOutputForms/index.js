@@ -17,7 +17,7 @@ class SearchAlgorithms extends Component {
       algorithm: 'linear',
       dataSet: '',
       searchTerm: '',
-      searchResult: '',
+      searchResult: {},
       timeTaken: '',
     };
   }
@@ -45,10 +45,10 @@ class SearchAlgorithms extends Component {
     }
   
     if(algorithm === 'linear') {
-      this.setState({searchResult: linearSearch(dataArray, searchTermRefined)});
+      this.setState({searchResult: linearSearch(dataArray, searchTermRefined, dataSet)});
     }
     if(algorithm === 'binary') {
-      this.setState({searchResult: binarySearch(dataArray, searchTermRefined)});
+      this.setState({searchResult: binarySearch(dataArray, searchTermRefined, dataSet)});
     }
   }
 
