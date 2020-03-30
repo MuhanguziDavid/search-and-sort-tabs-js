@@ -9,7 +9,7 @@ const LandingPage = () => {
       <React.Fragment>
         <div className="row  header-container">
           <div className="col-md-12 jumbotron jumbotron-custom">
-            <h1>Data Structures and Algorithms</h1>
+            <h1>Search and Sort Tabs</h1>
             <p>
               Enter a dataset and see the magic! <br/>
               (separate terms with a space) <br />

@@ -30,7 +30,7 @@ const InputForm = ({ handleAlgorithm, handleSubmit, handleChange, dataSet, searc
         </select>
       </div>
       <div className="input-group mb-3">
-        <textarea rows="3" name="dataSet" className="form-control" id="dataSet" placeholder="dataset" value={dataSet} onChange={handleChange} />
+        <textarea rows="3" name="dataSet" className="form-control" id="dataSet" placeholder="dataset (separate with spaces)" value={dataSet} onChange={handleChange} />
       </div>
       <div className="input-group mb-3">
         {algorithmType === 'searching' ? (

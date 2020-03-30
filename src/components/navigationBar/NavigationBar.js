@@ -11,7 +11,7 @@ class NavigationBar extends Component {
     const appNavbar = (
       <Navbar fixed="top" className="navigation-bar" bg="light" variant="light">
         <Container>
-          <Navbar.Brand expand="lg" href="/">DSA logo</Navbar.Brand>
+          <Navbar.Brand expand="lg" href="/">SearchSort</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
