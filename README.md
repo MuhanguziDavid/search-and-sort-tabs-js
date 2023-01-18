@@ -2,7 +2,9 @@
 
 Search and Sort Tabs is a tool which provides solutions to sorting and searching data (both text and numbers). It also provides a comprehensive comparison between different searching and sorting algorithms and their efficiency.
 
-#### [Deployed App here](https://search-and-sort-tabs.herokuapp.com/)
+<!-- #### [Deployed App here](https://search-and-sort-tabs.herokuapp.com/) -->
+#### Deployed App -> WIP :)
+
 
 -----
 
